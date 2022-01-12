@@ -7,8 +7,21 @@
 @section('main_content')
 <div class="container">
     <h1 class="pb-3">Questa è la pagina principale della creazione dei fumetti</h1>
-    <form action="">
-        
+
+    {{--
+    appunto importante: il campo "action" nei form indica la direzione da seguire quando si clicca sul pulsante invia (aka submit)
+    -> in questo caso indica alla funzione controller dei comics: "store"
+    un altro campo da specificare è il campo "method" che indica il metodo da eseguire quando si clicca sul pulsante submit
+    ->in questo caso è un metodo post
+    --}}
+    <form action="{{ route('comics.store') }}" method="post">
+        {{-- 
+        Cross-site request forgeries -> questa è una protezione da attacchi verso informazioni sensibili dell'untente
+        Laravel ci protegge da questi attacchi. In questo caso se non ci fosse questo "@csrf" la pagina sarebbe automaticamente
+        bloccata da Laravel.
+        --}}
+        @csrf
+
         <div class="mb-3">
             {{-- titolo --}}
             <label for="title" class="form-label">Inserisci titolo</label>
