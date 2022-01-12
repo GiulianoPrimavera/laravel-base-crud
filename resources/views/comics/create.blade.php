@@ -22,46 +22,49 @@
         --}}
         @csrf
 
+
+        {{-- i campi necessare per i label sono il "for" che deve essere uguale all'"id" dell'input --}}
+        {{-- i campi necessari per gli input sono: il "type", l'"id"(per il label), il "name"(questo serve per recuperare i date nella funzione "store" costruttore) --}}
         <div class="mb-3">
             {{-- titolo --}}
             <label for="title" class="form-label">Inserisci titolo</label>
-            <input type="text" class="form-control" id="title">
+            <input type="text" class="form-control" name="title" id="title">
         </div>
         
         <div class="mb-3">
             {{-- descrizione --}}
             <label for="description" class="form-label">Inserisci descrizione</label>
-            <input type="text" class="form-control" id="description">
+            <input type="text" class="form-control" name="description" id="description">
         </div>
 
         <div class="mb-3">
             {{-- thumb-nail --}}
             <label for="thumb" class="form-label">Inserisci thumb-nail</label>
-            <input type="text" class="form-control" id="thumb">
+            <input type="text" class="form-control" name="thumb" id="thumb">
         </div>
 
         <div class="mb-3">
             {{-- prezzo --}}
             <label for="price" class="form-label">Inserisci prezzo</label>
-            <input type="text" class="form-control" id="price">
+            <input type="text" class="form-control" name="price" id="price">
         </div>
 
         <div class="mb-3">
             {{-- serie --}}
             <label for="series" class="form-label">Inserisci serie</label>
-            <input type="text" class="form-control" id="series">
+            <input type="text" class="form-control" name="series" id="series">
         </div>
 
         <div class="mb-3">
             {{-- data di uscita --}}
             <label for="sale_date" class="form-label">Inserisci data di uscita</label>
-            <input type="text" class="form-control" id="sale_date">
+            <input type="text" class="form-control" name="sale_date" id="sale_date">
         </div>
 
         <div class="mb-3">
             {{-- tipo --}}
             <label for="type" class="form-label">Inserisci tipo</label>
-            <input type="text" class="form-control" id="type">
+            <input type="text" class="form-control" name="type" id="type">
         </div>
 
         <div>
