@@ -5,14 +5,10 @@
 @endsection
 
 @section('main_content')
-<h1>Questa è la pagina principale</h1>
-<div class="container">
-    <ul>
-        @foreach ($comics as $comic)
-        <li>
-            {{ $comic->title }}
-        </li>
-        @endforeach
-    </ul>
-</div>
+    <div class="container">
+        <h1>Questa è la home</h1>
+    
+        <a href="{{ route('comics.index') }}">Vai alla sezione Comics</a>
+
+    </div>
 @endsection
