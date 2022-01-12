@@ -1,14 +1,14 @@
 @extends('layouts.base_layout')
 
 @section('title')
-    Home
+    Comics
 @endsection
 
 @section('main_content')
 <div class="container">
-    <h1>Questa è la pagina principale</h1>
+    <h1>Questa è la pagina principale dei fumetti</h1>
 
-    <a href="" class="btn btn-primary my-3">Aggingi Fumetto</a>
+    <a href="{{ route('comics.create') }}" class="btn btn-primary my-3">Aggingi Fumetto</a>
 
     <ul>
         @foreach ($comics as $comic)
