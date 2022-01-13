@@ -38,7 +38,7 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        /* dump($request->all()); */
+        /* dump($request); */
 
         $data = $request->all();
 
@@ -79,7 +79,10 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comicBook = Comic::findOrFail($id);
+
+        return view("comics.edit", compact("comicBook"));
+        /* questa fnzione ritrorna una view di un form */
     }
 
     /**
