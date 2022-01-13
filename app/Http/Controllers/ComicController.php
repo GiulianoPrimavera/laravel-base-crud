@@ -82,7 +82,6 @@ class ComicController extends Controller
         $comicBook = Comic::findOrFail($id);
 
         return view("comics.edit", compact("comicBook"));
-        /* questa fnzione ritrorna una view di un form */
     }
 
     /**
@@ -92,9 +91,15 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $updateFormData = $request->all();
+
+        $comic->title = $updateFormData["title"];
+
+        $comic->save();
+
+        return redirect()->route("comics.show", compact("comic"));
     }
 
     /**
