@@ -41,7 +41,7 @@ class ComicController extends Controller
         /* dump($request); */
         
         $request->validate([
-            "title" => "required|min:5|unique" 
+            "title" => "required|min:5" 
         ]);
 
         $data = $request->all();
