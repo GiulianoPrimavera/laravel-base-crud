@@ -34,5 +34,6 @@
     <a href=" {{ route('home.index')}} " class="btn btn-primary">torna alla home</a>
     <a href=" {{ route('comics.index')}} " class="btn btn-success">torna alla pagina principale dei fumetti</a>
     <a href=" {{ route('comics.edit', $comic->id)}} " class="btn btn-secondary">modifica questo fumetto</a>
+    <a href=" {{ route('comics.destroy', $comic->id)}} " class="btn btn-danger">elimina questo fumetto</a>
 </div>
 @endsection
