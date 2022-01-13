@@ -95,7 +95,7 @@ class ComicController extends Controller
     {
         $updateFormData = $request->all();
 
-        $comic->title = $updateFormData["title"];
+        $comic->update($updateFormData);
 
         $comic->save();
 
