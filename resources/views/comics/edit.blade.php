@@ -11,6 +11,8 @@
     <form action="{{ route('comics.update', $comicBook->id) }}" method="post">
         @csrf
 
+        {{-- qui viene specificato il metodo HTTP da utilizzare, poiché il form accetta solo "post" o "get" --}}
+        @method("PUT")
 
         <div class="mb-3">
             {{-- titolo --}}
